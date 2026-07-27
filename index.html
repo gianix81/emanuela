@@ -23,7 +23,7 @@
   "url": "https://www.emanueladelorenzo.it/",
   "image": "assets/poster.jpg",
   "telephone": "+39 333 632 3033",
-  "email": "emanueladelorenzo@virgilio.it",
+  "email": "dottoressadelorenzo@gmail.com",
   "sameAs": [
     "https://www.instagram.com/emanuela_delorenzo_psicologa/",
     "https://www.facebook.com/emanuela.delorenzo.16",
@@ -40,7 +40,8 @@
   "founder": {
     "@type": "Person",
     "name": "Emanuela De Lorenzo",
-    "jobTitle": "Psicologa clinica"
+    "jobTitle": "Psicologa clinica",
+    "description": "Iscritta all'Albo degli Psicologi della Campania n. 8325. Esperta in Psicologia Giuridica e in Gestione e Formazione delle Risorse Umane."
   },
   "areaServed": "Napoli e provincia",
   "priceRange": "€€"
@@ -408,6 +409,8 @@ footer a:hover{color:var(--avorio)}
           <article class="carta-area rivela"><span class="num">— 06</span><h3>Difficoltà scolastiche ed educative</h3><p>Un supporto psicologico-educativo per studenti e famiglie, costruito sull'esperienza maturata nei contesti scolastici e sociali.</p></article>
           <article class="carta-area rivela"><span class="num">— 07</span><h3>Sostegno alla genitorialità</h3><p>Uno spazio per i genitori: comprendere i propri figli e se stessi dentro un ruolo che cambia continuamente.</p></article>
           <article class="carta-area rivela"><span class="num">— 08</span><h3>Crescita personale e consapevolezza</h3><p>Non serve stare male per iniziare: conoscersi meglio è già una forma di cura e di libertà.</p></article>
+          <article class="carta-area rivela"><span class="num">— 09</span><h3>Psicologia giuridica</h3><p>Consulenza psicologica in ambito giuridico e peritale, con un approccio rigoroso e rispettoso delle persone coinvolte.</p></article>
+          <article class="carta-area rivela"><span class="num">— 10</span><h3>Risorse umane e formazione</h3><p>Per aziende e organizzazioni: gestione e formazione delle risorse umane, benessere nei contesti di lavoro.</p></article>
         </div>
       </div>
     </div>
@@ -475,7 +478,7 @@ footer a:hover{color:var(--avorio)}
         <div class="rivela">
           <div class="voce-contatto"><b>Studio</b><span>Indirizzo dello studio — Napoli <em style="font-size:12px;color:rgba(247,243,237,.4)">(da confermare)</em></span></div>
           <div class="voce-contatto"><b>Telefono</b><a href="tel:+393336323033">+39 333 632 3033</a></div>
-          <div class="voce-contatto"><b>Email</b><a href="mailto:emanueladelorenzo@virgilio.it">emanueladelorenzo@virgilio.it</a></div>
+          <div class="voce-contatto"><b>Email</b><a href="mailto:dottoressadelorenzo@gmail.com">dottoressadelorenzo@gmail.com</a></div>
           <div class="voce-contatto"><b>Social</b><span><a href="https://www.instagram.com/emanuela_delorenzo_psicologa/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/emanuela.delorenzo.16" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.linkedin.com/in/emanuela-de-lorenzo-18935689/" target="_blank" rel="noopener">LinkedIn</a></span></div>
           <div class="voce-contatto"><b>Ricevo</b><span>Su appuntamento</span></div>
         </div>
@@ -492,8 +495,8 @@ footer a:hover{color:var(--avorio)}
   <footer>
     <div class="righe">
       <div>
-        © <span id="anno">2026</span> Dott.ssa Emanuela De Lorenzo — Psicologa<br>
-        Iscrizione Albo degli Psicologi: n. e regione da confermare · P.IVA da inserire
+        © <span id="anno">2026</span> Dott.ssa Emanuela De Lorenzo — Psicologa Clinica<br>
+        Iscritta all'Albo degli Psicologi della Campania n. 8325 · P.IVA da inserire
       </div>
       <div style="text-align:right">
         <a href="#">Privacy Policy</a> · <a href="#">Cookie Policy</a><br>
@@ -691,7 +694,7 @@ footer a:hover{color:var(--avorio)}
       c.id = 'area-' + (i + 1);
       var a = document.createElement('a');
       a.href = '#' + c.id;
-      a.innerHTML = '<i>0' + (i + 1) + '</i>' + c.querySelector('h3').textContent;
+      a.innerHTML = '<i>' + String(i + 1).padStart(2, '0') + '</i>' + c.querySelector('h3').textContent;
       indice.appendChild(a);
     });
     var vociIndice = indice.querySelectorAll('a');
