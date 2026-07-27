@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psicologa a Napoli | Dott.ssa Emanuela De Lorenzo</title>
+<meta name="description" content="Emanuela De Lorenzo, psicologa clinica a Napoli. Percorsi di supporto psicologico per il benessere emotivo, le relazioni e i momenti di cambiamento. Richiedi un primo colloquio.">
+<link rel="canonical" href="https://www.emanueladelorenzo.it/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Psicologa a Napoli | Dott.ssa Emanuela De Lorenzo">
+<meta property="og:description" content="Uno spazio professionale e accogliente in cui comprendere ciò che stai vivendo, ritrovare equilibrio e costruire un cambiamento possibile.">
+<meta property="og:image" content="assets/poster.jpg">
+<meta property="og:locale" content="it_IT">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Psychologist",
+  "name": "Studio Emanuela De Lorenzo",
+  "description": "Studio di psicologia clinica a Napoli. Percorsi di supporto psicologico per adulti e giovani adulti: benessere emotivo, relazioni, autostima, momenti di cambiamento.",
+  "url": "https://www.emanueladelorenzo.it/",
+  "image": "assets/poster.jpg",
+  "telephone": "+39 000 000 0000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Indirizzo studio (da confermare)",
+    "addressLocality": "Napoli",
+    "addressRegion": "Campania",
+    "postalCode": "80100",
+    "addressCountry": "IT"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Emanuela De Lorenzo",
+    "jobTitle": "Psicologa clinica"
+  },
+  "areaServed": "Napoli e provincia",
+  "priceRange": "€€"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quando può essere utile rivolgersi a uno psicologo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Quando emozioni, relazioni o cambiamenti diventano difficili da affrontare da soli, o quando si avverte il bisogno di uno spazio protetto per capire ciò che sta accadendo. Non serve avere una diagnosi o una situazione grave: a volte basta il desiderio di stare meglio." }
+    },
+    {
+      "@type": "Question",
+      "name": "Come funziona il primo colloquio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Il primo colloquio è un incontro conoscitivo: si approfondiscono la situazione, le esigenze e le aspettative, senza impegno. Serve a capire insieme da dove partire e se il percorso proposto è quello giusto." }
+    },
+    {
+      "@type": "Question",
+      "name": "Le sedute possono svolgersi online?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La disponibilità di colloqui online è in via di definizione: contattami per informazioni aggiornate su modalità e disponibilità." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto dura un percorso psicologico?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non esiste una durata standard: obiettivi, frequenza e modalità vengono concordati insieme dopo il primo colloquio e verificati nel tempo, rispettando i tempi di ciascuno." }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --salvia:#536B63;
+  --salvia-chiara:#A8BBB2;
+  --avorio:#F7F3ED;
+  --terracotta:#C9866B;
+  --antracite:#29312F;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'Manrope',system-ui,sans-serif;
+  --ease-premium:cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-padding-top:90px}
+body{font-family:var(--font-body);background:var(--avorio);color:var(--antracite);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* ---------- Preloader ---------- */
+#preloader{position:fixed;inset:0;z-index:100;background:var(--avorio);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .8s var(--ease-premium),visibility .8s}
+#preloader.via{opacity:0;visibility:hidden}
+#preloader .monogramma{font-family:var(--font-display);font-size:64px;font-weight:500;color:var(--salvia);line-height:1}
+#preloader .monogramma em{font-style:italic;color:var(--terracotta)}
+#preloader .plinea{width:120px;height:1px;background:rgba(41,49,47,.15);overflow:hidden}
+#preloader .plinea i{display:block;height:100%;width:0;background:var(--salvia);transition:width .3s}
+#preloader .pperc{font-size:11px;letter-spacing:.3em;color:rgba(41,49,47,.5);text-transform:uppercase}
+
+/* ---------- Scroll progress ---------- */
+#progresso{position:fixed;top:0;left:0;height:2px;width:0;background:var(--terracotta);z-index:60}
+
+/* ---------- Header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px clamp(20px,4vw,48px);transition:background .4s,box-shadow .4s,padding .4s;opacity:0;animation:fade-giu .9s var(--ease-premium) .15s both}
+header.solido{background:rgba(247,243,237,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(41,49,47,.07);padding-top:14px;padding-bottom:14px}
+@keyframes fade-giu{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+.logo{display:flex;flex-direction:column;line-height:1.15;text-decoration:none}
+.logo b{font-family:var(--font-display);font-weight:600;font-size:20px;letter-spacing:.01em}
+.logo span{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--salvia)}
+nav{display:flex;gap:clamp(14px,2.4vw,32px);align-items:center}
+nav a{text-decoration:none;font-size:13.5px;font-weight:500;color:rgba(41,49,47,.75);position:relative;padding:4px 0;transition:color .3s}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--terracotta);transition:width .35s var(--ease-premium)}
+nav a:hover{color:var(--antracite)}
+nav a:hover::after{width:100%}
+.cta-header{background:var(--salvia);color:var(--avorio) !important;padding:11px 22px;border-radius:999px;font-size:13.5px;font-weight:600;text-decoration:none;transition:background .3s,transform .3s;white-space:nowrap}
+.cta-header:hover{background:var(--antracite);transform:translateY(-1px)}
+.cta-header::after{display:none}
+#apri-menu{display:none;background:none;border:none;cursor:pointer;width:40px;height:40px;position:relative;z-index:70}
+#apri-menu span{display:block;width:22px;height:2px;background:var(--antracite);margin:5px auto;transition:transform .35s var(--ease-premium),opacity .3s}
+body.menu-aperto #apri-menu span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.menu-aperto #apri-menu span:nth-child(2){opacity:0}
+body.menu-aperto #apri-menu span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#menu-mobile{position:fixed;inset:0;z-index:65;background:var(--avorio);display:flex;flex-direction:column;justify-content:center;padding:0 clamp(28px,8vw,60px);gap:6px;transform:translateY(-100%);transition:transform .55s cubic-bezier(.22,1,.36,1);visibility:hidden}
+body.menu-aperto #menu-mobile{transform:translateY(0);visibility:visible}
+#menu-mobile a{font-family:var(--font-display);font-size:clamp(34px,9vw,48px);font-weight:500;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(41,49,47,.08);opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease-premium),transform .5s var(--ease-premium)}
+body.menu-aperto #menu-mobile a{opacity:1;transform:translateY(0)}
+#menu-mobile a em{font-style:italic;color:var(--salvia);margin-right:14px;font-size:.5em;vertical-align:middle}
+#menu-mobile .cta-menu{margin-top:26px;background:var(--salvia);color:var(--avorio);border-radius:999px;text-align:center;font-family:var(--font-body);font-size:16px;font-weight:600;padding:16px;border-bottom:none}
+
+/* ---------- Hero video / scene ---------- */
+#v{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;background:var(--avorio)}
+.scene{position:fixed;inset:0;z-index:10;display:flex;align-items:flex-end;padding:0 clamp(20px,6vw,80px) clamp(70px,12vh,130px);opacity:0;pointer-events:none;transition:opacity .9s ease;overflow:hidden}
+.scene.attiva{opacity:1;pointer-events:auto}
+.sfondo{position:absolute;inset:-5%;background-size:cover;background-position:center;will-change:transform;transform:scale(1.03);z-index:-1;display:none}
+.scene.attiva .sfondo.kb-a{animation:kb-zoom 9s ease-out forwards}
+.scene.attiva .sfondo.kb-b{animation:kb-pan 9s ease-out forwards}
+@keyframes kb-zoom{from{transform:scale(1.03)}to{transform:scale(1.15)}}
+@keyframes kb-pan{from{transform:scale(1.1) translateX(1.5%)}to{transform:scale(1.1) translateX(-1.5%)}}
+.scene-int{max-width:640px;background:rgba(247,243,237,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.55);border-radius:20px;padding:clamp(24px,4vw,40px) clamp(22px,4vw,44px);box-shadow:0 24px 60px -30px rgba(41,49,47,.35)}
+.scene .occhiello{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--salvia);margin-bottom:14px}
+.scene .occhiello::before{content:"";width:26px;height:1.5px;background:var(--terracotta)}
+.scene h1,.scene h2{font-family:var(--font-display);font-weight:500;font-size:clamp(34px,4.6vw,60px);line-height:1.04;letter-spacing:-.01em;margin-bottom:14px}
+.scene h1 em,.scene h2 em{font-style:italic;color:var(--salvia)}
+.scene p{font-size:clamp(14.5px,1.25vw,17px);line-height:1.65;color:rgba(41,49,47,.82);max-width:52ch}
+.scene .riga-cta{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-size:14.5px;font-weight:600;padding:14px 28px;border-radius:999px;transition:transform .3s,background .3s,color .3s,border-color .3s}
+.btn:active{transform:scale(.96)}
+.btn-pieno{background:var(--salvia);color:var(--avorio)}
+.btn-pieno:hover{background:var(--antracite);transform:translateY(-2px)}
+.btn-contorno{border:1.5px solid rgba(41,49,47,.28);color:var(--antracite);background:transparent}
+.btn-contorno:hover{border-color:var(--salvia);color:var(--salvia);transform:translateY(-2px)}
+.btn .freccia{transition:transform .3s}
+.btn:hover .freccia{transform:translate(3px,-3px)}
+.hero-casc>*{opacity:0;animation:fade-su .9s var(--ease-premium) both}
+.hero-casc>*:nth-child(1){animation-delay:.35s}
+.hero-casc>*:nth-child(2){animation-delay:.55s}
+.hero-casc>*:nth-child(3){animation-delay:.75s}
+.hero-casc>*:nth-child(4){animation-delay:.95s}
+@keyframes fade-su{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+#indicatore{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);z-index:12;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(41,49,47,.55);opacity:0;animation:fade-su 1s var(--ease-premium) 1.6s both;pointer-events:none;transition:opacity .5s}
+#indicatore.via{opacity:0 !important}
+#indicatore .filo{width:1.5px;height:34px;background:rgba(41,49,47,.2);overflow:hidden;border-radius:2px}
+#indicatore .filo i{display:block;width:100%;height:40%;background:var(--terracotta);animation:goccia 1.6s ease-in-out infinite}
+@keyframes goccia{from{transform:translateY(-120%)}to{transform:translateY(260%)}}
+#controlli-hero{position:fixed;right:clamp(18px,3vw,42px);top:50%;transform:translateY(-50%);z-index:14;display:flex;flex-direction:column;align-items:center;gap:8px;transition:opacity .4s,visibility .4s}
+#controlli-hero.via{opacity:0;visibility:hidden;pointer-events:none}
+.freccia-hero{width:44px;height:44px;border:1px solid rgba(41,49,47,.2);border-radius:50%;display:grid;place-items:center;background:rgba(247,243,237,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--antracite);font-size:21px;line-height:1;cursor:pointer;box-shadow:0 10px 30px -18px rgba(41,49,47,.5);transition:transform .3s var(--ease-premium),background .3s,color .3s,opacity .3s}
+.freccia-hero:hover:not(:disabled){transform:scale(1.08);background:var(--salvia);color:var(--avorio)}
+.freccia-hero:focus-visible{outline:2px solid var(--terracotta);outline-offset:3px}
+.freccia-hero:disabled{opacity:.3;cursor:default}
+#controlli-hero .contatore{font-size:10px;font-weight:700;letter-spacing:.16em;color:rgba(41,49,47,.62);padding:5px 0}
+#hero-scroll{position:relative;z-index:0}
+
+/* ---------- Contenuto ---------- */
+#contenuto{position:relative;z-index:20;background:var(--avorio);border-radius:36px 36px 0 0;box-shadow:0 -30px 60px -40px rgba(41,49,47,.4)}
+.sezione{padding:clamp(70px,10vw,130px) clamp(20px,6vw,80px)}
+.stretta{max-width:1120px;margin:0 auto}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--salvia);margin-bottom:18px}
+.kicker::before{content:"";width:26px;height:1.5px;background:var(--terracotta)}
+.titolo{font-family:var(--font-display);font-weight:500;font-size:clamp(30px,3.6vw,50px);line-height:1.08;letter-spacing:-.01em;margin-bottom:18px}
+.titolo em{font-style:italic;color:var(--salvia)}
+.sottotitolo{font-size:clamp(15px,1.2vw,17.5px);line-height:1.7;color:rgba(41,49,47,.75);max-width:62ch}
+.rivela{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease-premium),transform .9s var(--ease-premium)}
+.rivela.visto{opacity:1;transform:translateY(0)}
+
+/* Chi sono */
+#chi-sono .griglia{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(30px,5vw,70px);align-items:center}
+#chi-sono figure{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/4.6}
+#chi-sono figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-premium)}
+#chi-sono figure:hover img{transform:scale(1.05)}
+#chi-sono figure::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.35);border-radius:24px;pointer-events:none}
+#chi-sono .cornice{position:absolute;left:-16px;bottom:-16px;width:60%;height:60%;border:1.5px solid var(--salvia-chiara);border-radius:20px;z-index:-1}
+#chi-sono blockquote{font-family:var(--font-display);font-style:italic;font-size:clamp(19px,1.7vw,24px);line-height:1.45;color:var(--salvia);border-left:2px solid var(--terracotta);padding-left:20px;margin:26px 0}
+#chi-sono .para{font-size:15.5px;line-height:1.75;color:rgba(41,49,47,.8);margin-bottom:14px}
+
+/* Aree — scrollytelling sticky */
+#aree{background:var(--salvia);color:var(--avorio);border-radius:36px 36px 0 0;margin-top:-36px;position:relative}
+#aree .kicker{color:var(--salvia-chiara)}
+#aree .kicker::before{background:var(--terracotta)}
+#aree .titolo em{color:var(--salvia-chiara)}
+#aree .layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,5vw,80px);align-items:start}
+#aree .colonna-sticky{position:sticky;top:110px}
+#aree .colonna-sticky .sottotitolo{color:rgba(247,243,237,.75)}
+#aree .indice{margin-top:30px;display:flex;flex-direction:column;gap:2px}
+#aree .indice a{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:12px;text-decoration:none;font-size:14px;font-weight:500;color:rgba(247,243,237,.55);transition:color .3s,background .3s}
+#aree .indice a i{font-style:normal;font-size:11px;color:var(--terracotta);font-weight:700;width:20px}
+#aree .indice a.corrente{color:var(--avorio);background:rgba(247,243,237,.09)}
+#aree .indice a:hover{color:var(--avorio)}
+.carta-area{background:rgba(247,243,237,.06);border:1px solid rgba(247,243,237,.14);border-radius:20px;padding:clamp(24px,3vw,36px);margin-bottom:18px;backdrop-filter:blur(4px);transition:border-color .4s,background .4s,transform .4s}
+.carta-area:hover{border-color:rgba(247,243,237,.35);background:rgba(247,243,237,.09);transform:translateY(-3px)}
+.carta-area .num{font-family:var(--font-display);font-style:italic;font-size:15px;color:var(--terracotta);display:block;margin-bottom:10px}
+.carta-area h3{font-family:var(--font-display);font-weight:500;font-size:clamp(21px,2vw,27px);margin-bottom:8px}
+.carta-area p{font-size:14.5px;line-height:1.65;color:rgba(247,243,237,.72)}
+#aree .nota-aree{font-size:12.5px;color:rgba(247,243,237,.5);margin-top:8px;line-height:1.6}
+
+/* Percorso */
+#percorso{background:#fff;border-radius:36px 36px 0 0;margin-top:-36px;position:relative}
+#percorso .passi{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,28px);margin-top:44px;counter-reset:passo}
+.passo{position:relative;padding:26px 22px 28px;border-radius:18px;background:var(--avorio);border:1px solid rgba(41,49,47,.07);transition:transform .4s var(--ease-premium),box-shadow .4s}
+.passo:hover{transform:translateY(-5px);box-shadow:0 18px 40px -24px rgba(41,49,47,.35)}
+.passo::before{counter-increment:passo;content:"0" counter(passo);font-family:var(--font-display);font-style:italic;font-size:34px;color:var(--terracotta);display:block;margin-bottom:12px;line-height:1}
+.passo h3{font-size:16.5px;font-weight:700;margin-bottom:8px}
+.passo p{font-size:14px;line-height:1.6;color:rgba(41,49,47,.72)}
+#percorso .chiusa{margin-top:46px;text-align:center}
+#percorso .chiusa p{font-family:var(--font-display);font-style:italic;font-size:clamp(19px,1.8vw,25px);color:var(--salvia);max-width:46ch;margin:0 auto 22px}
+
+/* FAQ */
+#faq{background:var(--avorio)}
+#faq .lista{max-width:760px;margin:36px auto 0}
+#faq details{border-bottom:1px solid rgba(41,49,47,.12);padding:6px 0}
+#faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 4px;font-size:16.5px;font-weight:600;transition:color .3s}
+#faq summary::-webkit-details-marker{display:none}
+#faq summary:hover{color:var(--salvia)}
+#faq summary .segno{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid rgba(41,49,47,.25);display:grid;place-items:center;font-weight:400;font-size:18px;color:var(--salvia);transition:transform .4s var(--ease-premium),background .3s,color .3s,border-color .3s}
+#faq details[open] summary .segno{transform:rotate(45deg);background:var(--salvia);color:var(--avorio);border-color:var(--salvia)}
+#faq details p{padding:0 44px 20px 4px;font-size:15px;line-height:1.7;color:rgba(41,49,47,.75)}
+
+/* Contatti */
+#contatti{background:var(--antracite);color:var(--avorio);border-radius:36px 36px 0 0;position:relative;overflow:hidden}
+#contatti::before{content:"";position:absolute;top:-140px;right:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(168,187,178,.16),transparent 65%)}
+#contatti .kicker{color:var(--salvia-chiara)}
+#contatti .titolo em{color:var(--salvia-chiara)}
+#contatti .sottotitolo{color:rgba(247,243,237,.7)}
+#contatti .griglia{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(30px,5vw,80px);margin-top:40px;position:relative}
+.voce-contatto{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(247,243,237,.12);align-items:baseline;transition:padding-left .3s}
+.voce-contatto:hover{padding-left:6px}
+.voce-contatto b{flex:none;width:110px;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--salvia-chiara);font-weight:700}
+.voce-contatto span,.voce-contatto a{font-size:16px;color:var(--avorio);text-decoration:none}
+.voce-contatto a:hover{color:var(--terracotta)}
+#contatti .pannello{background:rgba(247,243,237,.05);border:1px solid rgba(247,243,237,.14);border-radius:22px;padding:clamp(26px,3vw,38px);height:fit-content}
+#contatti .pannello h3{font-family:var(--font-display);font-weight:500;font-size:26px;margin-bottom:10px}
+#contatti .pannello p{font-size:14.5px;line-height:1.65;color:rgba(247,243,237,.72);margin-bottom:22px}
+.btn-wa{width:100%;justify-content:center;background:var(--terracotta);color:#fff;font-size:15px}
+.btn-wa:hover{background:#b5735a;transform:translateY(-2px)}
+#contatti .privacy-nota{font-size:12px;color:rgba(247,243,237,.45);margin-top:16px;line-height:1.6}
+
+/* Footer */
+footer{background:var(--antracite);color:rgba(247,243,237,.55);padding:34px clamp(20px,6vw,80px) 40px;border-top:1px solid rgba(247,243,237,.1)}
+footer .righe{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px;line-height:1.7}
+footer a{color:rgba(247,243,237,.7);text-decoration:none}
+footer a:hover{color:var(--avorio)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  #aree .layout{grid-template-columns:1fr}
+  #aree .colonna-sticky{position:static}
+  #aree .indice{display:none}
+  #percorso .passi{grid-template-columns:repeat(2,1fr)}
+  #chi-sono .griglia{grid-template-columns:1fr}
+  #chi-sono figure{max-width:440px;aspect-ratio:4/4}
+  #contatti .griglia{grid-template-columns:1fr}
+}
+@media (max-width:768px){
+  nav{display:none}
+  #apri-menu{display:block}
+  .scene{align-items:flex-end;padding-bottom:12vh}
+  .scene-int{padding:22px 20px}
+  .sfondo{display:block}
+  #controlli-hero{right:14px;top:auto;bottom:26px;transform:none;flex-direction:row}
+  #controlli-hero .contatore{order:2}
+  #avanti-hero{order:3}
+  .freccia-hero{width:40px;height:40px}
+  #indicatore{display:none}
+}
+@media (max-width:560px){
+  #percorso .passi{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .rivela{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div id="preloader">
+  <div class="monogramma">E<em>D</em></div>
+  <div class="plinea"><i id="pbar"></i></div>
+  <div class="pperc" id="pperc">0%</div>
+</div>
+
+<div id="progresso"></div>
+
+<header id="testata">
+  <a class="logo" href="#inizio">
+    <b>Emanuela De Lorenzo</b>
+    <span>Psicologa · Napoli</span>
+  </a>
+  <nav>
+    <a href="#chi-sono">Chi sono</a>
+    <a href="#aree">Aree di intervento</a>
+    <a href="#percorso">Come funziona</a>
+    <a href="#faq">Domande</a>
+    <a href="#contatti">Contatti</a>
+    <a class="cta-header" href="#contatti">Primo colloquio</a>
+  </nav>
+  <button id="apri-menu" aria-label="Apri il menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div id="menu-mobile">
+  <a href="#chi-sono"><em>01</em>Chi sono</a>
+  <a href="#aree"><em>02</em>Aree di intervento</a>
+  <a href="#percorso"><em>03</em>Come funziona</a>
+  <a href="#faq"><em>04</em>Domande</a>
+  <a href="#contatti"><em>05</em>Contatti</a>
+  <a class="cta-menu" href="#contatti">Richiedi un primo colloquio</a>
+</div>
+
+<video id="v" muted playsinline preload="auto" poster="assets/poster.jpg" src="assets/master.mp4"></video>
+
+<section class="scene attiva" id="inizio" data-kb="kb-a" data-foto="scene-01">
+  <div class="sfondo kb-a"></div>
+  <div class="scene-int hero-casc">
+    <span class="occhiello">Dott.ssa Emanuela De Lorenzo</span>
+    <h1>Ritrovare equilibrio comincia dal sentirsi <em>ascoltati</em></h1>
+    <p>Sono Emanuela De Lorenzo, psicologa clinica a Napoli. Ti accompagno in un percorso di consapevolezza e cambiamento, rispettando la tua storia, i tuoi bisogni e i tuoi tempi.</p>
+    <div class="riga-cta">
+      <a class="btn btn-pieno" href="#contatti">Richiedi un primo colloquio <span class="freccia">↗</span></a>
+      <a class="btn btn-contorno" href="#aree">Scopri come posso aiutarti</a>
+    </div>
+  </div>
+</section>
+
+<section class="scene" data-kb="kb-b" data-foto="scene-02">
+  <div class="sfondo kb-b"></div>
+  <div class="scene-int">
+    <span class="occhiello">Uno spazio protetto</span>
+    <h2>Un luogo in cui <em>comprendere</em> ciò che stai vivendo</h2>
+    <p>Ci sono momenti in cui emozioni, relazioni o cambiamenti diventano difficili da affrontare da soli. Chiedere un supporto psicologico significa concedersi uno spazio in cui capire ciò che sta accadendo e individuare nuove possibilità.</p>
+  </div>
+</section>
+
+<section class="scene" data-kb="kb-a" data-foto="scene-03">
+  <div class="sfondo kb-a"></div>
+  <div class="scene-int">
+    <span class="occhiello">Il mio lavoro</span>
+    <h2>Ascolto, attenzione e <em>strumenti</em> professionali</h2>
+    <p>Nel mio lavoro offro uno sguardo attento e strumenti concreti per aiutarti a ritrovare maggiore benessere e costruire un rapporto più consapevole con te stesso e con gli altri.</p>
+  </div>
+</section>
+
+<section class="scene" data-kb="kb-b" data-foto="scene-04">
+  <div class="sfondo kb-b"></div>
+  <div class="scene-int">
+    <span class="occhiello">Insieme</span>
+    <h2>Un percorso costruito <em>insieme</em>, nel rispetto dei tuoi tempi</h2>
+    <p>Il percorso psicologico è un incontro fondato sull'ascolto e sulla fiducia: non risposte preconfezionate, ma la scoperta delle risorse che ti servono per affrontare le tue difficoltà.</p>
+    <div class="riga-cta">
+      <a class="btn btn-pieno" href="#contatti">Iniziamo a parlarne <span class="freccia">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<div id="indicatore"><span>Scorri</span><span class="filo"><i></i></span></div>
+<div id="controlli-hero" aria-label="Navigazione della presentazione">
+  <button class="freccia-hero" id="indietro-hero" type="button" aria-label="Scena precedente">↑</button>
+  <span class="contatore" id="contatore-hero" aria-live="polite">01 / 04</span>
+  <button class="freccia-hero" id="avanti-hero" type="button" aria-label="Scena successiva">↓</button>
+</div>
+<div id="hero-scroll"></div>
+
+<main id="contenuto">
+
+  <section class="sezione" id="chi-sono">
+    <div class="stretta">
+      <div class="griglia">
+        <div class="rivela">
+          <figure>
+            <img src="assets/scene-03.jpg" alt="Lo studio della Dott.ssa Emanuela De Lorenzo, psicologa a Napoli" loading="lazy">
+          </figure>
+        </div>
+        <div class="rivela" style="transition-delay:.12s">
+          <span class="kicker">Chi sono</span>
+          <h2 class="titolo">Psicologa clinica, con una storia nata <em>tra le persone</em></h2>
+          <p class="para">Sono Emanuela De Lorenzo, psicologa con formazione specialistica in Psicologia Clinica. Nel corso della mia esperienza professionale ho lavorato anche in contesti educativi e sociali, sviluppando una particolare attenzione alla persona, alle relazioni e ai processi di crescita.</p>
+          <blockquote>«Aiuto le persone a sentirsi bene con se stesse.»</blockquote>
+          <p class="para">Considero il percorso psicologico un incontro costruito sull'ascolto, sulla fiducia e sul rispetto. Il mio obiettivo non è offrire risposte preconfezionate, ma accompagnare ogni persona nella comprensione delle proprie difficoltà e nella scoperta delle risorse necessarie per affrontarle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sezione" id="aree">
+    <div class="stretta">
+      <div class="layout">
+        <div class="colonna-sticky">
+          <span class="kicker">Aree di intervento</span>
+          <h2 class="titolo">Come posso <em>aiutarti</em></h2>
+          <p class="sottotitolo">Ogni storia è diversa. Queste sono le aree in cui posso accompagnarti: se non ritrovi la tua situazione, il primo colloquio serve proprio a capire insieme da dove partire.</p>
+          <div class="indice" id="indice-aree"></div>
+          <p class="nota-aree">Le aree indicate hanno finalità informativa e non sostituiscono una valutazione professionale individuale.</p>
+        </div>
+        <div id="carte-aree">
+          <article class="carta-area rivela"><span class="num">— 01</span><h3>Ansia, preoccupazioni e stress</h3><p>Quando la mente non si ferma mai e il corpo lo fa sentire: dare un nome a ciò che accade è il primo passo per ritrovare respiro.</p></article>
+          <article class="carta-area rivela"><span class="num">— 02</span><h3>Autostima e rapporto con sé</h3><p>Imparare a guardarsi con più gentilezza e costruire un dialogo interiore che sostiene, invece di giudicare.</p></article>
+          <article class="carta-area rivela"><span class="num">— 03</span><h3>Difficoltà emotive</h3><p>Tristezza, rabbia, vuoto o emozioni difficili da nominare: ascoltarle invece di combatterle, per capire che cosa chiedono.</p></article>
+          <article class="carta-area rivela"><span class="num">— 04</span><h3>Relazioni affettive e familiari</h3><p>Quando i legami più importanti diventano fonte di fatica: lavorare sul modo di stare nelle relazioni, senza perdersi.</p></article>
+          <article class="carta-area rivela"><span class="num">— 05</span><h3>Momenti di crisi o cambiamento</h3><p>Separazioni, lutti, nuove fasi di vita: attraversare il cambiamento con un sostegno che rispetta i tuoi tempi.</p></article>
+          <article class="carta-area rivela"><span class="num">— 06</span><h3>Difficoltà scolastiche ed educative</h3><p>Un supporto psicologico-educativo per studenti e famiglie, costruito sull'esperienza maturata nei contesti scolastici e sociali.</p></article>
+          <article class="carta-area rivela"><span class="num">— 07</span><h3>Sostegno alla genitorialità</h3><p>Uno spazio per i genitori: comprendere i propri figli e se stessi dentro un ruolo che cambia continuamente.</p></article>
+          <article class="carta-area rivela"><span class="num">— 08</span><h3>Crescita personale e consapevolezza</h3><p>Non serve stare male per iniziare: conoscersi meglio è già una forma di cura e di libertà.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sezione" id="percorso">
+    <div class="stretta">
+      <div class="rivela" style="text-align:center;max-width:680px;margin:0 auto">
+        <span class="kicker" style="justify-content:center">Come funziona</span>
+        <h2 class="titolo">Un percorso in <em>quattro passi</em></h2>
+        <p class="sottotitolo" style="margin:0 auto">Dal primo contatto alla definizione degli obiettivi: tutto viene concordato insieme, con chiarezza, fin dall'inizio.</p>
+      </div>
+      <div class="passi">
+        <div class="passo rivela"><h3>Primo contatto</h3><p>Mi scrivi o mi chiami: bastano poche righe per fissare un appuntamento, senza impegno.</p></div>
+        <div class="passo rivela" style="transition-delay:.1s"><h3>Primo colloquio</h3><p>Ci conosciamo: approfondiamo la situazione, le esigenze e le aspettative.</p></div>
+        <div class="passo rivela" style="transition-delay:.2s"><h3>Definizione del percorso</h3><p>Concordiamo obiettivi, frequenza, modalità e costi, in modo trasparente.</p></div>
+        <div class="passo rivela" style="transition-delay:.3s"><h3>Percorso psicologico</h3><p>Lavoriamo insieme, verificando nel tempo cambiamenti e risultati.</p></div>
+      </div>
+      <div class="chiusa rivela">
+        <p>«Non devi avere già tutte le risposte per chiedere aiuto. Il primo colloquio serve proprio a capire da dove partire.»</p>
+        <a class="btn btn-pieno" href="#contatti">Richiedi informazioni <span class="freccia">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sezione" id="faq">
+    <div class="stretta">
+      <div class="rivela" style="text-align:center">
+        <span class="kicker" style="justify-content:center">Domande frequenti</span>
+        <h2 class="titolo">Le cose che è <em>giusto</em> sapere</h2>
+      </div>
+      <div class="lista rivela">
+        <details>
+          <summary>Quando può essere utile rivolgersi a uno psicologo? <span class="segno">+</span></summary>
+          <p>Quando emozioni, relazioni o cambiamenti diventano difficili da affrontare da soli, o quando si avverte il bisogno di uno spazio protetto per capire ciò che sta accadendo. Non serve avere una diagnosi o una situazione grave: a volte basta il desiderio di stare meglio.</p>
+        </details>
+        <details>
+          <summary>Come funziona il primo colloquio? <span class="segno">+</span></summary>
+          <p>È un incontro conoscitivo: approfondiamo la situazione, le esigenze e le aspettative, senza impegno. Serve a capire insieme da dove partire e se il percorso proposto è quello giusto per te.</p>
+        </details>
+        <details>
+          <summary>Le sedute possono svolgersi online? <span class="segno">+</span></summary>
+          <p>La disponibilità di colloqui online è in via di definizione: contattami per informazioni aggiornate su modalità e disponibilità.</p>
+        </details>
+        <details>
+          <summary>Quanto dura un percorso psicologico? <span class="segno">+</span></summary>
+          <p>Non esiste una durata standard: obiettivi, frequenza e modalità vengono concordati insieme dopo il primo colloquio e verificati nel tempo, rispettando i tempi di ciascuno.</p>
+        </details>
+        <details>
+          <summary>Quello che dico resta riservato? <span class="segno">+</span></summary>
+          <p>Sì. Il lavoro psicologico è vincolato al segreto professionale e al Codice Deontologico degli Psicologi: ciò che condividi resta protetto.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sezione" id="contatti">
+    <div class="stretta">
+      <div class="rivela">
+        <span class="kicker">Contatti</span>
+        <h2 class="titolo">Iniziamo <em>a parlarne</em></h2>
+        <p class="sottotitolo">Scrivimi con il mezzo che preferisci: ti risponderò appena possibile per fissare un primo colloquio o semplicemente darti le informazioni che cerchi.</p>
+      </div>
+      <div class="griglia">
+        <div class="rivela">
+          <div class="voce-contatto"><b>Studio</b><span>Indirizzo dello studio — Napoli <em style="font-size:12px;color:rgba(247,243,237,.4)">(da confermare)</em></span></div>
+          <div class="voce-contatto"><b>Telefono</b><a href="tel:+390000000000">+39 000 000 0000 <em style="font-size:12px;color:rgba(247,243,237,.4)">(placeholder)</em></a></div>
+          <div class="voce-contatto"><b>Email</b><a href="mailto:info@emanueladelorenzo.it">info@emanueladelorenzo.it <em style="font-size:12px;color:rgba(247,243,237,.4)">(placeholder)</em></a></div>
+          <div class="voce-contatto"><b>Social</b><span><a href="#" rel="noopener">Instagram</a> · <a href="#" rel="noopener">LinkedIn</a></span></div>
+          <div class="voce-contatto"><b>Ricevo</b><span>Su appuntamento</span></div>
+        </div>
+        <div class="pannello rivela" style="transition-delay:.12s">
+          <h3>Richiedi un primo colloquio</h3>
+          <p>Il modo più rapido è un messaggio WhatsApp: scrivi il tuo nome e come preferisci essere ricontattato. Non è necessario raccontare altro.</p>
+          <a class="btn btn-wa" href="https://wa.me/390000000000?text=Buongiorno%2C%20vorrei%20informazioni%20per%20un%20primo%20colloquio." target="_blank" rel="noopener">Scrivimi su WhatsApp <span class="freccia">↗</span></a>
+          <p class="privacy-nota">Scrivendo acconsenti a essere ricontattato per rispondere alla tua richiesta. Nessun dato viene diffuso o utilizzato per altri scopi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="righe">
+      <div>
+        © <span id="anno">2026</span> Dott.ssa Emanuela De Lorenzo — Psicologa<br>
+        Iscrizione Albo degli Psicologi: n. e regione da confermare · P.IVA da inserire
+      </div>
+      <div style="text-align:right">
+        <a href="#">Privacy Policy</a> · <a href="#">Cookie Policy</a><br>
+        Sito realizzato da <a href="#" rel="noopener">Siriomedia</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  'use strict';
+  var v = document.getElementById('v');
+  var scene = Array.prototype.slice.call(document.querySelectorAll('.scene'));
+  var heroScroll = document.getElementById('hero-scroll');
+  var contenuto = document.getElementById('contenuto');
+  var preloader = document.getElementById('preloader');
+  var pbar = document.getElementById('pbar');
+  var pperc = document.getElementById('pperc');
+  var indicatore = document.getElementById('indicatore');
+  var controlliHero = document.getElementById('controlli-hero');
+  var indietroHero = document.getElementById('indietro-hero');
+  var avantiHero = document.getElementById('avanti-hero');
+  var contatoreHero = document.getElementById('contatore-hero');
+  var testata = document.getElementById('testata');
+  var progresso = document.getElementById('progresso');
+  var mobile = matchMedia('(max-width: 768px)').matches;
+  var ridotto = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nScene = scene.length;
+  var DURATA_STIMATA = 10; // durata di fallback del video
+  var altezzaHero = 0;
+  var scenaCorrente = 0;
+
+  document.getElementById('anno').textContent = new Date().getFullYear();
+
+  function impostaAltezzaHero(){
+    if (mobile || ridotto) altezzaHero = nScene * 0.9 * innerHeight;
+    else altezzaHero = ((v && v.duration) ? v.duration : DURATA_STIMATA) * 1.4 * innerHeight;
+    heroScroll.style.height = Math.max(altezzaHero - innerHeight, innerHeight) + 'px';
+  }
+
+  /* ---------- Preloader ---------- */
+  var caricato = false;
+  function segnaPerc(p){
+    p = Math.max(0, Math.min(100, Math.round(p)));
+    pbar.style.width = p + '%';
+    pperc.textContent = p + '%';
+  }
+  function sblocca(){
+    if (caricato) return;
+    caricato = true;
+    segnaPerc(100);
+    setTimeout(function(){ preloader.classList.add('via'); }, 250);
+  }
+  document.body.style.overflow = 'hidden';
+  function fineBlocco(){ document.body.style.overflow = ''; }
+  setTimeout(function(){ sblocca(); fineBlocco(); }, mobile ? 2500 : 9000);
+
+  /* ---------- Modalità mobile / reduced motion: foto Ken Burns ---------- */
+  if (mobile || ridotto) {
+    if (v) { v.removeAttribute('src'); v.remove(); v = null; }
+    scene.forEach(function(s){
+      var f = s.getAttribute('data-foto');
+      var div = s.querySelector('.sfondo');
+      div.style.display = 'block';
+      div.style.backgroundImage = 'linear-gradient(rgba(247,243,237,.18), rgba(41,49,47,.16)), url(assets/' + f + '.jpg)';
+    });
+    var prima = new Image();
+    prima.onload = function(){ sblocca(); fineBlocco(); };
+    prima.src = 'assets/scene-01.jpg';
+    segnaPerc(60);
+  } else {
+    /* preloader: buffering reale */
+    var pollBuffer = setInterval(function(){
+      if (!v) { clearInterval(pollBuffer); return; }
+      try {
+        if (v.buffered.length && v.duration) {
+          var p = (v.buffered.end(v.buffered.length - 1) / v.duration) * 100;
+          if (!caricato) segnaPerc(p * 0.99);
+          if (p > 96) { clearInterval(pollBuffer); sblocca(); fineBlocco(); }
+        }
+      } catch(e){}
+    }, 180);
+    v.addEventListener('canplaythrough', function(){ sblocca(); fineBlocco(); });
+    v.addEventListener('loadedmetadata', impostaAltezzaHero);
+  }
+
+  impostaAltezzaHero();
+  addEventListener('resize', impostaAltezzaHero);
+
+  /* ---------- Scrubbing con lerp (desktop) ---------- */
+  var target = 0, corrente = 0;
+  function progressoHero(){
+    var max = Math.max(1, altezzaHero - innerHeight);
+    return Math.min(1, Math.max(0, scrollY / max));
+  }
+  addEventListener('scroll', function(){
+    var p = progressoHero();
+    if (v && v.duration) target = p * (v.duration - 0.05);
+    if (indicatore) indicatore.classList.toggle('via', scrollY > 40);
+    testata.classList.toggle('solido', scrollY > 30);
+    var tot = document.documentElement.scrollHeight - innerHeight;
+    progresso.style.width = (tot > 0 ? (scrollY / tot) * 100 : 0) + '%';
+  }, { passive: true });
+
+  function aggiornaScene(p){
+    var margine = 0.015;
+    var nuovaScena = Math.min(nScene - 1, Math.floor(Math.min(.9999, Math.max(0, p)) * nScene));
+    scenaCorrente = nuovaScena;
+    contatoreHero.textContent = String(scenaCorrente + 1).padStart(2, '0') + ' / ' + String(nScene).padStart(2, '0');
+    indietroHero.disabled = scenaCorrente === 0;
+    avantiHero.setAttribute('aria-label', scenaCorrente === nScene - 1 ? 'Continua al sito' : 'Scena successiva');
+    scene.forEach(function(s, i){
+      var da = i / nScene, a = (i + 1) / nScene;
+      if (i > 0) da += margine;
+      if (i < nScene - 1) a -= margine;
+      s.classList.toggle('attiva', p >= da && p <= a);
+    });
+  }
+
+  function vaiAllaScena(indice){
+    indice = Math.max(0, Math.min(nScene - 1, indice));
+    var max = Math.max(1, altezzaHero - innerHeight);
+    var destinazione = indice === nScene - 1 ? max : max * ((indice + .08) / nScene);
+    scrollTo({ top: destinazione, behavior: ridotto ? 'auto' : 'smooth' });
+  }
+  indietroHero.addEventListener('click', function(){ vaiAllaScena(scenaCorrente - 1); });
+  avantiHero.addEventListener('click', function(){
+    if (scenaCorrente === nScene - 1) contenuto.scrollIntoView({ behavior: ridotto ? 'auto' : 'smooth' });
+    else vaiAllaScena(scenaCorrente + 1);
+  });
+  addEventListener('keydown', function(e){
+    if (scrollY > altezzaHero || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+      e.preventDefault();
+      if (scenaCorrente === nScene - 1) contenuto.scrollIntoView({ behavior: ridotto ? 'auto' : 'smooth' });
+      else vaiAllaScena(scenaCorrente + 1);
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      vaiAllaScena(scenaCorrente - 1);
+    }
+  });
+
+  if (!mobile && !ridotto && v) {
+    (function tick(){
+      corrente += (target - corrente) * 0.12;
+      if (v.duration && Math.abs(corrente - v.currentTime) > 0.01) {
+        try { v.currentTime = corrente; } catch(e){}
+      }
+      var dentroHero = scrollY < altezzaHero - innerHeight + 200;
+      v.style.visibility = dentroHero ? 'visible' : 'hidden';
+      controlliHero.classList.toggle('via', !dentroHero);
+      if (v.duration) aggiornaScene(corrente / v.duration);
+      requestAnimationFrame(tick);
+    })();
+  } else {
+    addEventListener('scroll', function(){
+      var dentroHero = scrollY < altezzaHero - innerHeight + 200;
+      controlliHero.classList.toggle('via', !dentroHero);
+      aggiornaScene(progressoHero());
+    }, { passive: true });
+    aggiornaScene(0);
+  }
+
+  /* ---------- Menu mobile ---------- */
+  var bottoneMenu = document.getElementById('apri-menu');
+  var menuMobile = document.getElementById('menu-mobile');
+  function chiudiMenu(){
+    document.body.classList.remove('menu-aperto');
+    bottoneMenu.setAttribute('aria-expanded', 'false');
+  }
+  bottoneMenu.addEventListener('click', function(){
+    var aperto = document.body.classList.toggle('menu-aperto');
+    bottoneMenu.setAttribute('aria-expanded', aperto ? 'true' : 'false');
+  });
+  menuMobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', chiudiMenu); });
+
+  /* ---------- Reveal on scroll ---------- */
+  var oss = new IntersectionObserver(function(voci){
+    voci.forEach(function(voce){
+      if (voce.isIntersecting) { voce.target.classList.add('visto'); oss.unobserve(voce.target); }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.rivela').forEach(function(el){ oss.observe(el); });
+
+  /* ---------- Indice aree (sticky nav) ---------- */
+  var carte = Array.prototype.slice.call(document.querySelectorAll('.carta-area'));
+  var indice = document.getElementById('indice-aree');
+  if (indice && carte.length) {
+    carte.forEach(function(c, i){
+      c.id = 'area-' + (i + 1);
+      var a = document.createElement('a');
+      a.href = '#' + c.id;
+      a.innerHTML = '<i>0' + (i + 1) + '</i>' + c.querySelector('h3').textContent;
+      indice.appendChild(a);
+    });
+    var vociIndice = indice.querySelectorAll('a');
+    var ossAree = new IntersectionObserver(function(voci){
+      voci.forEach(function(voce){
+        if (voce.isIntersecting) {
+          var idx = carte.indexOf(voce.target);
+          vociIndice.forEach(function(a, i){ a.classList.toggle('corrente', i === idx); });
+        }
+      });
+    }, { threshold: 0.6 });
+    carte.forEach(function(c){ ossAree.observe(c); });
+  }
+})();
+</script>
+</body>
+</html>
