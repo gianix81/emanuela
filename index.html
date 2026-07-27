@@ -270,6 +270,7 @@ footer a:hover{color:var(--avorio)}
 @media (max-width:768px){
   nav{display:none}
   #apri-menu{display:block}
+  #v{display:none}
   .scene{align-items:flex-end;padding-bottom:12vh}
   .scene-int{padding:22px 20px}
   .sfondo{display:block}
@@ -383,7 +384,7 @@ footer a:hover{color:var(--avorio)}
 <div id="indicatore"><span>Scorri</span><span class="filo"><i></i></span></div>
 <div id="controlli-hero" aria-label="Navigazione della presentazione">
   <button class="freccia-hero" id="indietro-hero" type="button" aria-label="Scena precedente">↑</button>
-  <span class="contatore" id="contatore-hero" aria-live="polite">01 / 04</span>
+  <span class="contatore" id="contatore-hero" aria-live="polite">01 / 05</span>
   <button class="freccia-hero" id="avanti-hero" type="button" aria-label="Scena successiva">↓</button>
 </div>
 <div id="hero-scroll"></div>
@@ -541,7 +542,10 @@ footer a:hover{color:var(--avorio)}
   var contatoreHero = document.getElementById('contatore-hero');
   var testata = document.getElementById('testata');
   var progresso = document.getElementById('progresso');
-  var mobile = matchMedia('(max-width: 768px)').matches;
+  var mqMobile = matchMedia('(max-width: 768px)');
+  var mobile = mqMobile.matches;
+  /* se si attraversa il breakpoint (rotazione, resize) si ricarica: la modalità video/foto è decisa al load */
+  if (mqMobile.addEventListener) mqMobile.addEventListener('change', function(){ location.reload(); });
   var ridotto = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var nScene = scene.length;
   var DURATA_STIMATA = 27.5; // durata di fallback del video
