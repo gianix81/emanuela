@@ -328,7 +328,7 @@ footer a:hover{color:var(--avorio)}
 
 <video id="v" muted playsinline preload="auto" poster="assets/poster.jpg" src="assets/master.mp4"></video>
 
-<section class="scene attiva" id="inizio" data-kb="kb-a" data-foto="scene-01">
+<section class="scene attiva" id="inizio" data-kb="kb-a" data-foto="scene-03">
   <div class="sfondo kb-a"></div>
   <div class="scene-int hero-casc">
     <span class="occhiello">Dott.ssa Emanuela De Lorenzo</span>
@@ -338,24 +338,6 @@ footer a:hover{color:var(--avorio)}
       <a class="btn btn-pieno" href="#contatti">Richiedi un primo colloquio <span class="freccia">↗</span></a>
       <a class="btn btn-contorno" href="#aree">Scopri come posso aiutarti</a>
     </div>
-  </div>
-</section>
-
-<section class="scene" data-kb="kb-b" data-foto="scene-02">
-  <div class="sfondo kb-b"></div>
-  <div class="scene-int">
-    <span class="occhiello">Uno spazio protetto</span>
-    <h2>Un luogo in cui <em>comprendere</em> ciò che stai vivendo</h2>
-    <p>Ci sono momenti in cui emozioni, relazioni o cambiamenti diventano difficili da affrontare da soli. Chiedere un supporto psicologico significa concedersi uno spazio in cui capire ciò che sta accadendo e individuare nuove possibilità.</p>
-  </div>
-</section>
-
-<section class="scene" data-kb="kb-a" data-foto="scene-03">
-  <div class="sfondo kb-a"></div>
-  <div class="scene-int">
-    <span class="occhiello">Il mio lavoro</span>
-    <h2>Ascolto, attenzione e <em>strumenti</em> professionali</h2>
-    <p>Nel mio lavoro offro uno sguardo attento e strumenti concreti per aiutarti a ritrovare maggiore benessere e costruire un rapporto più consapevole con te stesso e con gli altri.</p>
   </div>
 </section>
 
@@ -375,7 +357,7 @@ footer a:hover{color:var(--avorio)}
 <div id="indicatore"><span>Scorri</span><span class="filo"><i></i></span></div>
 <div id="controlli-hero" aria-label="Navigazione della presentazione">
   <button class="freccia-hero" id="indietro-hero" type="button" aria-label="Scena precedente">↑</button>
-  <span class="contatore" id="contatore-hero" aria-live="polite">01 / 04</span>
+  <span class="contatore" id="contatore-hero" aria-live="polite">01 / 02</span>
   <button class="freccia-hero" id="avanti-hero" type="button" aria-label="Scena successiva">↓</button>
 </div>
 <div id="hero-scroll"></div>
@@ -539,7 +521,7 @@ footer a:hover{color:var(--avorio)}
   if (mqMobile.addEventListener) mqMobile.addEventListener('change', function(){ location.reload(); });
   var ridotto = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var nScene = scene.length;
-  var DURATA_STIMATA = 21.7; // durata di fallback del video
+  var DURATA_STIMATA = 10; // durata di fallback del video
   var altezzaHero = 0;
   var scenaCorrente = 0;
 
